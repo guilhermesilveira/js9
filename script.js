@@ -48,6 +48,10 @@ function md5Simples(texto) {
 function principal() {
     for (let i = 0; i < 5; i++) {
         let mensagem = prompt("Insira sua mensagem:");
+        if (mensagem === null) {
+            mensagem = "";
+        }
+
         let mensagemCodificada = codificarRot13(mensagem);
         let md5DaMensagem = md5Simples(mensagem);
         alert("Mensagem codificada: " + mensagemCodificada + "\n" + "MD5 simples: " + md5DaMensagem);
