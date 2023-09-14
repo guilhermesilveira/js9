@@ -3,6 +3,7 @@ const letras = 'abcdefghijklmnopqrstuvwxyz';
 // Função ROT13 simplificada
 function codificarRot13(texto) {
     let resultado = '';
+    // for (let i = 0; i < 5; i++) {
     for (let caractere of texto) {
         let indice = letras.indexOf(caractere);
         if (indice === -1) {
@@ -35,6 +36,7 @@ function codificarMapeamento(texto) {
     return resultado;
 }
 
+// PARA SABER MAIS
 // Função "md5" simples
 function md5Simples(texto) {
     let soma = 0;
@@ -45,17 +47,10 @@ function md5Simples(texto) {
 }
 
 // Função principal que pede o input, mostra o resultado codificado e o "md5"
-function principal() {
-    for (let i = 0; i < 5; i++) {
-        let mensagem = prompt("Insira sua mensagem:");
-        if (mensagem === null) {
-            mensagem = "";
-        }
-
-        let mensagemCodificada = codificarRot13(mensagem);
-        let md5DaMensagem = md5Simples(mensagem);
-        alert("Mensagem codificada: " + mensagemCodificada + "\n" + "MD5 simples: " + md5DaMensagem);
-    }
+function principal(mensagem) {
+    let mensagemCodificada = codificarRot13(mensagem);
+    let md5DaMensagem = md5Simples(mensagem);
+    alert("Mensagem codificada: " + mensagemCodificada + "\n" + "MD5 simples: " + md5DaMensagem);
 }
 
-principal();
+principal("Olá tudo bem?");
