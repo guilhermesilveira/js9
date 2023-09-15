@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Codificação</title>
     <style>
+        html,
         body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             background-color: #01080E;
             color: #D7F9FF;
         }
+
+        input {
+            background-color: #D7F9FF;
+            color: #01080E;
+            border: 1px solid #01080E;
+            border-radius: 5px;
+            padding: 5px;
+            line-height: 200%;
+            width: 50%;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #D7F9FF;
+            color: #01080E;
+            border: 1px solid #01080E;
+            border-radius: 5px;
+            padding: 5px;
+            line-height: 200%;
+        }
     </style>
 </head>
+
 <body>
-    <input type="text" id="textoATraduzir" >
-    <button onclick="traduz();" />
+    <input type="text" id="textoACodificar" placeholder="Sua mensagem aqui"/>
+    <button onclick="codificaCampo()">Codificar</button>
     <script src="script.js"></script>
 </body>
+
 </html>

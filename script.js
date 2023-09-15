@@ -47,10 +47,15 @@ function md5Simples(texto) {
 }
 
 // Função principal que pede o input, mostra o resultado codificado e o "md5"
-function principal(mensagem) {
+function codifica(mensagem) {
     let mensagemCodificada = codificarRot13(mensagem);
     let md5DaMensagem = md5Simples(mensagem);
     alert("Mensagem codificada: " + mensagemCodificada + "\n" + "MD5 simples: " + md5DaMensagem);
 }
 
-principal("Olá tudo bem?");
+function codificaCampo() {
+    let texto = document.getElementById("textoACodificar").value;
+    codifica(texto);
+}
+
+// codifica("Olá tudo bem?");
